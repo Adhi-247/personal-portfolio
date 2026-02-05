@@ -39,11 +39,11 @@ const Footer = () => {
         {/* Social Media Icons - Responsive */}
         <div className="flex flex-wrap justify-center space-x-4 mt-6">
           {[
-            { icon: <FaFacebook />, link: "https://www.facebook.com/share/15m6NEeaGC/?mibextid=wwXIfr" },
+            { icon: <FaFacebook />, link: "https://www.facebook.com/share/1FUQggquHh/?mibextid=wwXIfr" },
             { icon: <FaTwitter />, link: ""},
-            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/supun-dulshan-2735a1316" },
-            { icon: <FaInstagram />, link: "https://www.instagram.com/dul_sh__official?igsh=MXRnMHBubzljMXcwaQ%3D%3D&utm_source=qr" },
-            { icon: <FaYoutube />, link: "https://youtube.com/@sdcreativestudio2?si=bFCJHPb06Qjz4MWf" },
+            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/adeesha-prabashwara-549464386/" },
+            { icon: <FaInstagram />, link: "https://www.instagram.com/a_d_h_i__7?igsh=MTdjdTd6eThjY3o4NQ%3D%3D&utm_source=qr" },
+            { icon: <FaYoutube />, link: "https://youtube.com/@gamesvibes7?si=F35eyxKFpB3zfvMg" },
             
           ].map((item, index) => (
             <a

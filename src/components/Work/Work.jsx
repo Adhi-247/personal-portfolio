@@ -1,9 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projects } from "../../constants";
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink, FiFolder, FiGrid, FiSmartphone, FiCode, FiPenTool } from "react-icons/fi";
 
 const ProjectCard = ({ project }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // Auto-rotate images every 3 seconds
+  useEffect(() => {
+    if (project.images && project.images.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => 
+          (prevIndex + 1) % project.images.length
+        );
+      }, 3000);
+      
+      return () => clearInterval(interval);
+    }
+  }, [project.images]);
+  
+  // Get current image (support both single image and image array)
+  const currentImage = project.images 
+    ? project.images[currentImageIndex] 
+    : project.image;
+  
   // Determine project category
   const getProjectCategory = (tags) => {
     if (tags.some(tag => ["Figma", "UI/UX", "Prototyping"].includes(tag))) return "UI/UX Design";
@@ -48,11 +68,29 @@ const ProjectCard = ({ project }) => {
         {/* Project Image with Overlay */}
         <div className="relative h-56 overflow-hidden">
           <img
-            src={project.image}
+            src={currentImage}
             alt={project.title}
             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/50 to-transparent opacity-90" />
+          
+          {/* Image indicators - show dots if multiple images */}
+          {project.images && project.images.length > 1 && (
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+              {project.images.map((_, index) => (
+                <motion.div
+                  key={index}
+                  className={`w-2 h-2 rounded-full cursor-pointer ${
+                    index === currentImageIndex 
+                      ? 'bg-purple-500' 
+                      : 'bg-white/30'
+                  }`}
+                  whileHover={{ scale: 1.2 }}
+                  onClick={() => setCurrentImageIndex(index)}
+                />
+              ))}
+            </div>
+          )}
           
           {/* Action Buttons */}
           <div className="absolute top-4 right-4 flex items-center space-x-3 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-20">

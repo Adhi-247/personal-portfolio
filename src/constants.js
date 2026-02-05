@@ -20,7 +20,6 @@ import figmaL from './assets/tech_logo/figma1.png';
 
 import mongodbLogo from './assets/tech_logo/mongodb.png';
 import firebaseLogo from './assets/tech_logo/firebase.png';
-import homeImage from './assets/work_logo/home.jpeg';
 import cLogo from './assets/tech_logo/c.png';
 import cppLogo from './assets/tech_logo/cpp.png';
 import javaLogo from './assets/tech_logo/java.png';
@@ -51,16 +50,33 @@ import southernProvince18Logo from './assets/company_logo/southern_province 18.j
 
 // Education Section Logo's
 
-import sschoolLogo from './assets/education_logo/sschool_logo.png';
 import sliitLogo from './assets/education_logo/sliit.png';
+import schoolLogo from './assets/education_logo/school_logo.jpg';
 
 // Project Section Logo's
-import githubdetLogo from './assets/work_logo/github_det.png';
-import csprepLogo from './assets/work_logo/cs_prep.png';
-import movierecLogo from './assets/work_logo/movie_rec.png';
-import figmaLogo from './assets/work_logo/figma.png';
-import android from './assets/work_logo/finance.jpg';
-import  ecommerce from './assets/work_logo/ecommerce.png';
+// Electrical Appliance Store Images
+import electricalStore1 from './assets/work_logo/electrical_store_1.png';
+import electricalStore2 from './assets/work_logo/electrical_store_2.png';
+import electricalStore3 from './assets/work_logo/electrical_store_3.png';
+import electricalStore4 from './assets/work_logo/electrical_store_4.png';
+
+// Disaster Management Images
+import disasterManagement1 from './assets/work_logo/disaster_management_1.png';
+import disasterManagement2 from './assets/work_logo/disaster_management_2.png';
+import disasterManagement3 from './assets/work_logo/disaster_management_3.png';
+import disasterManagement4 from './assets/work_logo/disaster_management_4.png';
+
+// Train Reservation Images
+import trainReservation1 from './assets/work_logo/train_reservation_1.jpeg';
+import trainReservation2 from './assets/work_logo/train_reservation_2.png';
+import trainReservation3 from './assets/work_logo/train_reservation_1.jpeg';
+import trainReservation4 from './assets/work_logo/train_reservation_2.png';
+
+// Boat Safari Images
+import boatSafari1 from './assets/work_logo/boat_safari_1.png';
+import boatSafari2 from './assets/work_logo/boat_safari_2.png';
+import boatSafari3 from './assets/work_logo/boat_safari_1.png';
+import boatSafari4 from './assets/work_logo/boat_safari_2.png';
 
 
 export const SkillsInfo = [
@@ -213,82 +229,71 @@ export const SkillsInfo = [
         school: "Sri Lanka Institute of Information Technology (SLIIT)",
         date: "2023 - 2027",
       
-        desc: `Pursuing a Bachelor of Science in Information Technology at SLIIT, focusing on software engineering, and modern web technologies. Actively involved in tech clubs . Served as a sub-committee member of the Faculty of Computing Student Community for the 2025/26 academic year, contributing to student engagement and community initiatives.`,
+        desc: `Currently a third-year undergraduate specializing in Software Engineering at SLIIT. Actively developing skills in full-stack web development, with hands-on experience in MERN stack projects and software engineering fundamentals. Motivated to apply academic knowledge to real-world applications and continuously learn modern technologies.`,
         degree: "BSc (Hons) in Information Technology"
       },
-   
-  
-    {
-      id: 4,
-      img: sschoolLogo,
-  
-      date: "2011 - 2022",
-   
-      desc: `Studied in the Commerce Stream for GCE Advanced Level (2011–2022), achieving C grades in Accounting and Business Studies, and completed Information and Communication Technology. Passed GCE O/L in 2018. Served as Head Prefect in 2020, President of the ICT Club, and an active member of the Media Unit. Volunteered at the Leo Club and participated in numerous extracurricular activities. Actively took part in and won prizes at annual sports meets, as well as zonal, provincial, island, and national championships in athletics, football, rugby, and chess. Achieved victories at zonal, Southern Province, and national levels in music and art competitions. Participated in new invention competitions at zonal, provincial, and all-island levels, winning several prizes. Also, won prizes and championships as an active member of the Youth Club.`,
-      degree: "ST.Servatius Collage-Matara"
-    },
+
+      {
+        id: 6,
+        img: schoolLogo,
+        date: "2007 - 2021",
+        desc: `Completed secondary education at Rahula College, Matara. Studied in the Physical Science stream for GCE Advanced Level and sat for the examination in 2021, achieving Combined Mathematics – B, Chemistry – C, Physics – S. Successfully passed GCE Ordinary Level with strong results, including distinctions in Mathematics, ICT, and Science.
+
+Actively represented the school football team from Under-13 to Under-20 levels between 2012 and 2020. Served as Vice-Captain in 2018 and Captain in 2019, and was nominated as Best Player at the Battle of Golden Ensigns football encounter in 2017. Awarded Sri Lanka Schools Sports Colours in 2019 for outstanding performance.
+
+Represented Sri Lanka Under-18 Schools Football Team at the 47th Asian Schools Football Championship held in Balikpapan, Indonesia in 2019. Recognized for strong discipline, leadership, teamwork, and excellent character.`,
+        degree: "Rahula College, Matara"
+      },
   ];
   
   export const projects = [
-    {
-      id: 0,
-      title: "FabFarm Clothing Platform",
-      image: figmaLogo,
-      description: "A modern clothing platform UI/UX project with clean, user-friendly interface for seamless shopping experiences. Features intuitive navigation, responsive design, and streamlined checkout process.",
-      tags: ["Figma", "UI/UX", "Prototyping", "Design System"],
-      github: "https://github.com/dulsh1/fabfam-clothing",
-      webapp: "https://www.figma.com/proto/AfBZ5DJSAkk7Ab281MELa6/fabfam-clothing",
-      tech_stack: ["Figma", "Prototyping", "UX Research"]
-    },
-    {
-      id: 1,
-      title: "PAT PAT CLEANING",
-      subtitle: "Laundry Management System",
-      date: "Aug 2024 - Oct 2024",
-      description: "Full-stack laundry management platform with real-time order tracking, payment integration, and comprehensive staff management portal. Features intuitive scheduling and automated notifications.",
-      image: homeImage,
-      tags: ["MySQL", "Express", "Java", "Bootstrap", "Full Stack"],
-      github: "https://github.com/dulsh1/patpat-cleaning",
-      webapp: "https://patpat-cleaning.vercel.app",
-      tech_stack: ["Java", "MySQL", "Express", "Bootstrap"]
-    },
-    {
-      id: 2,
-      title: "Movie Recommendation App",
-      description: "Advanced movie recommendation engine using React and modern APIs. Features personalized suggestions, dynamic content loading, and comprehensive search functionality.",
-      image: movierecLogo,
-      tags: ["React", "API", "JavaScript", "Tailwind CSS"],
-      github: "https://github.com/dulsh1/movie-recommendation",
-      webapp: "https://movie-recommendation-app-jet.vercel.app",
-      tech_stack: ["React", "RESTful APIs", "JavaScript"]
-    },
-    {id: 4,
-title: "e-commerce store frontend",
-description: "Modern e-commerce store frontend built with React. Features include product browsing, cart management, wishlist, responsive design, and seamless shopping experience similar to platforms like Daraz.",
-image: ecommerce,
-tags: ["React", "API", "JavaScript", "Tailwind CSS"],
-github: "https://github.com/dulsh1/ecommerce-estore.git",
-webapp: "https://ecommerce-estore.vercel.app",
-tech_stack: ["React", "RESTful APIs", "JavaScript"]
-    },
-
-    {
-      id: 3,
-      title: "Finance Tracker App",
-      image: android,
-      description: "Comprehensive finance tracking application with expense management, budget planning, and financial analytics. Built with modern Android development practices and Material Design.",
-      tags: ["Kotlin", "Android", "Firebase", "MVVM"],
-      github: "https://github.com/dulsh1/financeTracker.git",
-      webapp: "https://play.google.com/store/apps/details?id=com.dulsh1.financetracker",
-      tech_stack: ["Kotlin", "Firebase", "Android SDK", "MVVM"]
-    }
+  {
+    id: 0,
+    title: "Online Electrical Appliance Selling System",
+    description: "Full-stack e-commerce web application for selling electrical appliances with comprehensive product management and user experience features. Implemented CRUD operations for product catalog, inventory tracking, order management, user authentication, and payment processing.",
+    images: [electricalStore1, electricalStore2, electricalStore3, electricalStore4],
+    tags: ["React", "Node.js", "Express", "MongoDB", "Full Stack"],
+    github: "https://github.com/Adhi-247/Vithanage_Enterprises.git",
+    webapp: "https://youtu.be/QMz47hbfKNc",
+    tech_stack: ["React.js", "Node.js", "Express.js", "MongoDB", "MERN Stack"]
+  },
+  {
+    id: 1,
+    title: "Disaster Management System for Sri Lanka",
+    description: "Comprehensive disaster relief web application enabling citizens to request emergency assistance, report missing persons, and track active disasters across Sri Lankan districts. Implemented CRUD operations for help requests and missing person reports with real-time data storage, Base64 image upload functionality, district-based filtering, and multi-resource tracking.",
+    images: [disasterManagement1, disasterManagement2, disasterManagement3, disasterManagement4],
+    tags: ["React", "Node.js", "Express", "MongoDB", "React Router"],
+    github: "https://github.com/Adhi-247/Real-World-Problem-Solve.git",
+    webapp: "https://youtu.be/oPUGlVF6pkc",
+    tech_stack: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "React Router"]
+  },
+  {
+    id: 2,
+    title: "Online Train Reservations System",
+    description: "Java-based train booking system developed for user registration, train schedule management, and seat booking. Implemented real-time seat availability checks and secure booking-payment system. Designed interactive dashboards for users and admin with responsive UI.",
+    images: [trainReservation1, trainReservation2, trainReservation3, trainReservation4],
+    tags: ["Java", "JavaScript", "MySQL", "HTML", "CSS"],
+    github: "https://github.com/Adhi-247/Train-Reservation-System.git",
+    webapp: "https://youtu.be/YOUR_VIDEO_LINK_HERE",
+    tech_stack: ["Java Servlet", "JavaScript", "MySQL", "HTML", "CSS"]
+  },
+  {
+    id: 3,
+    title: "Boat Safari Trip Management System",
+    description: "PHP-based booking management system with user-friendly interface for safari listing, availability checking, and booking management. Added filtering and sorting features for safari type, pricing, capacity, and time slots. Implemented automated email notifications for booking confirmations and updates with responsive front-end.",
+    images: [boatSafari1, boatSafari2, boatSafari3, boatSafari4],
+    tags: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
+    github: "https://github.com/Adhi-247/boat-safari-management.git",
+    webapp: "https://youtu.be/YOUR_VIDEO_LINK_HERE",
+    tech_stack: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"]
+  }
 ];
   
   export const services = [
   {
     title: "Mobile Application Development",
     description: "Custom mobile application development for Android and iOS platforms using modern technologies like React Native, Kotlin, and Java. From concept to deployment, I deliver intuitive and performant mobile experiences.",
-    icon: "mobile", // or your icon component
+    icon: "mobile",
   },
   {
     title: "Web Development",
@@ -296,10 +301,13 @@ tech_stack: ["React", "RESTful APIs", "JavaScript"]
     icon: "web",
   },
   {
-    title: "UI/UX Engineering",
-    description: "User interface and experience design with a focus on user-centered principles. I create visually appealing and intuitive designs that enhance user engagement and satisfaction.",
-    icon: "uiux",
+    title: "Database Design & Management",
+    description: "Professional database design and management services using MySQL, MongoDB, and PostgreSQL. I create efficient database schemas, optimize queries, implement data security, and ensure scalable data architecture for web and mobile applications.",
+    icon: "database",
   },
-  // --- Add your new service below ---
-  
+  {
+    title: "Problem Solving & Software Solutions",
+    description: "Custom software solutions for real-world problems. I analyze business requirements and develop tailored applications that solve specific challenges, from disaster management to e-commerce platforms and booking systems.",
+    icon: "solution",
+  },
 ];

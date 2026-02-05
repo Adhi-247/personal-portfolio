@@ -41,42 +41,45 @@ const Chatbot = () => {
   }, [isOpen]);
 
   const botResponses = {
-    skills: "🚀 Adeesha is skilled in React, JavaScript, Python, Java, Kotlin, and many other technologies. He specializes in full-stack development, mobile apps, and UI/UX design. Want to see his skills section?",
-    projects: "💼 Check out his amazing projects including PAT PAT CLEANING (laundry management), Movie Recommendation App, E-commerce Store, and Finance Tracker App. All are live and on GitHub! Would you like specific details about any project?",
-    experience: "🎓 Adeesha has completed various certification courses and has hands-on experience in software development, including practical GitHub Actions and career skills training from LinkedIn Learning.",
-    education: "📚 He has a strong educational background in infromation technologhy and continues learning through professional development courses. Always staying updated with the latest technologies!",
-    contact: "📧 You can reach out to Adeesha through the contact section below, or connect with him on LinkedIn and GitHub for collaboration opportunities. He's always open to new opportunities!",
-    hello: "👋 Hello! Nice to meet you! I'm here to help you learn more about Adeesha's amazing work and skills. What would you like to know?",
-    help: "🤖 I can tell you about Adeesha's skills, projects, experience, education, or how to contact him. Try asking: 'Tell me about his projects' or 'What are his skills?'",
-    about: "👨‍💻 Adeesha is a passionate software developer with expertise in full-stack development, mobile applications, and UI/UX design. He's always eager to learn new technologies and work on innovative projects!",
-    github: "💻 You can find all of Adeesha's projects on GitHub! Each project card has direct links to both the source code and live demos. Check out the projects section below!",
-    demo: "🌐 All projects have live demos! Click on the 'Live Demo' buttons on any project card to see them in action. The links are fully functional!",
-    default: "🤔 That's an interesting question! I'd recommend checking out Adeesha's portfolio sections or reaching out to him directly for more specific information. Is there anything specific about his work you'd like to know?"
+    skills: "🚀 Adeesha is skilled in React, Node.js, Express, MongoDB, MySQL, Java, JavaScript, Python, PHP, Kotlin, and many other technologies. He specializes in full-stack development with MERN stack, Java Servlets, and PHP-based applications. Want to see his full skills section?",
+    projects: "💼 Check out his amazing projects: Online Electrical Appliance Store (MERN Stack), Disaster Management System for Sri Lanka (MERN Stack), Online Train Reservations System (Java Servlet), and Boat Safari Trip Management System (PHP & MySQL). All projects have GitHub repos and demo videos! Would you like specific details about any project?",
+    experience: "🎓 Adeesha has completed AI/ML Engineer certification from SLIIT, Python programming from Simplilearn, and ICT Diploma from ICBT Campus. He was also a former Sri Lanka National Football Team player and won multiple sports awards!",
+    education: "📚 He's currently pursuing BSc (Hons) in Information Technology at SLIIT (2023-2027), specializing in Software Engineering. Previously studied at Rahula College, Matara. Always staying updated with the latest technologies!",
+    contact: "📧 You can reach Adeesha at adeeshaprabashwarasenarath7@gmail.com or call +94 71 106 3357. Connect with him on LinkedIn and GitHub for collaboration opportunities. He's based in Colombo, Sri Lanka and always open to new opportunities!",
+    hello: "👋 Hello! Nice to meet you! I'm Adeesha's AI assistant. I can tell you about his software development projects, technical skills, certifications, and sports achievements. What would you like to know?",
+    help: "🤖 I can tell you about Adeesha's skills, projects, experience, education, or how to contact him. Try asking: 'Tell me about his projects', 'What technologies does he use?', or 'How can I contact him?'",
+    about: "👨‍💻 Adeesha Prabashwara is a passionate Software Engineering student at SLIIT specializing in full-stack and mobile development. He builds scalable web applications with MERN stack, Java, and PHP. He's also a former Sri Lanka National Football Team player! Always eager to learn new technologies and work on innovative projects!",
+    github: "💻 You can find all of Adeesha's projects on GitHub at github.com/Adhi-247! His main projects include e-commerce systems, disaster management platforms, train booking systems, and safari management applications. Each project card has direct links to source code and demo videos!",
+    demo: "🌐 Most projects have demo videos on YouTube! Click on the 'Live Demo' buttons on project cards to watch them in action. You can see real working demonstrations of the Electrical Store and Disaster Management systems!",
+    football: "⚽ Adeesha represented Sri Lanka Under-18 & Under-19 National Football Team at the Asian Championships in Indonesia (2019-2020). He also won Southern Province School Games, SLIIT Colours Award, and Rahula College Colours Award. He served as Football Team Captain in 2019!",
+    default: "🤔 That's an interesting question! I'd recommend checking out Adeesha's portfolio sections or reaching out to him directly for more specific information. You can ask me about his projects, skills, education, experience, or football achievements!"
   };
 
   const generateResponse = (input) => {
     const lowercaseInput = input.toLowerCase();
     
-    if (lowercaseInput.includes('skill') || lowercaseInput.includes('technology') || lowercaseInput.includes('tech')) {
+    if (lowercaseInput.includes('skill') || lowercaseInput.includes('technology') || lowercaseInput.includes('tech') || lowercaseInput.includes('stack')) {
       return botResponses.skills;
-    } else if (lowercaseInput.includes('project') || lowercaseInput.includes('work') || lowercaseInput.includes('portfolio')) {
+    } else if (lowercaseInput.includes('project') || lowercaseInput.includes('work') || lowercaseInput.includes('portfolio') || lowercaseInput.includes('app')) {
       return botResponses.projects;
-    } else if (lowercaseInput.includes('experience') || lowercaseInput.includes('job') || lowercaseInput.includes('career')) {
+    } else if (lowercaseInput.includes('experience') || lowercaseInput.includes('job') || lowercaseInput.includes('career') || lowercaseInput.includes('certificate') || lowercaseInput.includes('certification')) {
       return botResponses.experience;
-    } else if (lowercaseInput.includes('education') || lowercaseInput.includes('study') || lowercaseInput.includes('learn')) {
+    } else if (lowercaseInput.includes('education') || lowercaseInput.includes('study') || lowercaseInput.includes('learn') || lowercaseInput.includes('sliit') || lowercaseInput.includes('university') || lowercaseInput.includes('college')) {
       return botResponses.education;
-    } else if (lowercaseInput.includes('contact') || lowercaseInput.includes('reach') || lowercaseInput.includes('email')) {
+    } else if (lowercaseInput.includes('contact') || lowercaseInput.includes('reach') || lowercaseInput.includes('email') || lowercaseInput.includes('phone') || lowercaseInput.includes('call')) {
       return botResponses.contact;
-    } else if (lowercaseInput.includes('hello') || lowercaseInput.includes('hi') || lowercaseInput.includes('hey')) {
+    } else if (lowercaseInput.includes('hello') || lowercaseInput.includes('hi') || lowercaseInput.includes('hey') || lowercaseInput.includes('good')) {
       return botResponses.hello;
     } else if (lowercaseInput.includes('help')) {
       return botResponses.help;
     } else if (lowercaseInput.includes('about') || lowercaseInput.includes('who')) {
       return botResponses.about;
-    } else if (lowercaseInput.includes('github') || lowercaseInput.includes('code') || lowercaseInput.includes('repository')) {
+    } else if (lowercaseInput.includes('github') || lowercaseInput.includes('code') || lowercaseInput.includes('repository') || lowercaseInput.includes('repo')) {
       return botResponses.github;
-    } else if (lowercaseInput.includes('demo') || lowercaseInput.includes('live') || lowercaseInput.includes('website')) {
+    } else if (lowercaseInput.includes('demo') || lowercaseInput.includes('live') || lowercaseInput.includes('website') || lowercaseInput.includes('video')) {
       return botResponses.demo;
+    } else if (lowercaseInput.includes('football') || lowercaseInput.includes('sport') || lowercaseInput.includes('soccer') || lowercaseInput.includes('athlete') || lowercaseInput.includes('player')) {
+      return botResponses.football;
     } else {
       return botResponses.default;
     }
@@ -121,6 +124,7 @@ const Chatbot = () => {
     "Tell me about skills",
     "Show me projects", 
     "How to contact?",
+    "Football achievements",
     "GitHub repositories",
     "About Adeesha"
   ];

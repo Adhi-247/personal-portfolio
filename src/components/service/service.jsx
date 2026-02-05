@@ -1,6 +1,6 @@
 import React from "react";
 import { services } from "../../constants";
-import { FaMobileAlt, FaCloud, FaPalette, FaCode } from "react-icons/fa";
+import { FaMobileAlt, FaCloud, FaPalette, FaCode, FaDatabase, FaLightbulb } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const iconVariants = {
@@ -62,6 +62,24 @@ const iconMap = {
       className="p-4 bg-purple-500/10 rounded-2xl backdrop-blur-sm"
     >
       <FaCloud size={32} className="text-purple-400" />
+    </motion.div>
+  ),
+  database: (
+    <motion.div
+      whileHover="hover"
+      variants={iconVariants}
+      className="p-4 bg-purple-500/10 rounded-2xl backdrop-blur-sm"
+    >
+      <FaDatabase size={32} className="text-purple-400" />
+    </motion.div>
+  ),
+  solution: (
+    <motion.div
+      whileHover="hover"
+      variants={iconVariants}
+      className="p-4 bg-purple-500/10 rounded-2xl backdrop-blur-sm"
+    >
+      <FaLightbulb size={32} className="text-purple-400" />
     </motion.div>
   ),
 };
@@ -139,7 +157,7 @@ const Service = () => (
     </motion.div>
 
     <motion.div
-      className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4"
       variants={containerVariants}
     >
       {services.map((service, idx) => (
